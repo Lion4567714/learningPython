@@ -1,5 +1,4 @@
 import random
-from xml.etree.ElementTree import TreeBuilder
 
 NUM_DIGITS = 3
 MAX_GUESSES = 10
@@ -48,11 +47,11 @@ def main():
 
 def getSecretNum():
     numbers = list('0123456789')
-    random.shuffle(numbers)
 
     secretNum = ''
     for i in range(NUM_DIGITS):
-        secretNum += str(numbers[i])
+        random.shuffle(numbers)
+        secretNum += str(numbers[0])
     return secretNum
 
 
